@@ -119,6 +119,10 @@ describe("Pact", () => {
           withRequest: {
             method: "GET",
             path: "/animals/available",
+            query: term({
+              generate: '',
+              matcher: '^(test=test|)$'
+            }),
           },
           willRespondWith: {
             status: 401,
